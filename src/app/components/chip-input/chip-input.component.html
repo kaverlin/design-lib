@@ -1,0 +1,36 @@
+<div class="dropdown-backdrop" *ngIf="showDataDropDown" (click)="closeDropDown()"></div>
+<div class="chip-input-container">
+    <div class="input-wrapper">
+        <div class="selected-data-list" [class.input-focus]="canPresentSelectedList" (click)="onInputFocus">
+            <div class="input-items" *ngFor="let item of selectedData, let i=index" (click)="removeItemFromSelected(i, item)">
+                <img [src]="item?.img || '../../../assets/img/default_img.jpeg'" alt=" " style="margin-left: 4px;">
+                <span >{{item?.name || 'no name'}}</span>
+                 <img src="../../../assets/svg/little_close.svg" alt="icon">    
+            </div>
+        </div>
+        <input type="text" [name]="inputLabel" (focus)="onInputFocus()" [class.has-focus]="inputHasFocus" [class.show-retrieve-data]="showRetrieveData">
+        <label for="inputLabel">{{inputLabel}}</label>
+    </div>
+
+    <div class="data-list-wrapper" *ngIf="showDataDropDown">
+        <div class="put-data">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1093_688)">
+                   <path d="M15.7812 14.501L12.6656 11.3854C12.525 11.2448 12.3344 11.1667 12.1344 11.1667H11.625C12.4875 10.0635 13 8.67605 13 7.16667C13 3.57605 10.0906 0.666672 6.5 0.666672C2.90937 0.666672 0 3.57605 0 7.16667C0 10.7573 2.90937 13.6667 6.5 13.6667C8.00937 13.6667 9.39688 13.1542 10.5 12.2917V12.801C10.5 13.001 10.5781 13.1917 10.7188 13.3323L13.8344 16.4479C14.1281 16.7417 14.6031 16.7417 14.8938 16.4479L15.7781 15.5635C16.0719 15.2698 16.0719 14.7948 15.7812 14.501ZM6.5 11.1667C4.29063 11.1667 2.5 9.37917 2.5 7.16667C2.5 4.9573 4.2875 3.16667 6.5 3.16667C8.70938 3.16667 10.5 4.95417 10.5 7.16667C10.5 9.37605 8.7125 11.1667 6.5 11.1667Z" fill="#CCCCCC"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1093_688">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>        
+            <input class="input-search" type="search" name="" id="" placeholder="rechercher un pays" (change)="onInputChange($event)">
+        </div>
+        <div class="chip-list">
+            <div class="input-items" *ngFor="let item of filterData, let i=index" (click)="addItemToSelect(item, i)">
+                <img [src]="item?.img || '../../../assets/img/default_img.jpeg'" alt="icon" style="margin-left: 4px;" >
+                <span style="margin-right: 4px;">{{item?.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>

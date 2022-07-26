@@ -1,0 +1,340 @@
+<!-- 
+<div class="first-view-head">
+    <div class="first-block">
+        <div class="first-block-child1">
+            <div class="left-element">
+                <img src="../../../assets/svgs/pie-chart-icon.svg" alt="chart-icon">
+                <span>Marchands</span>
+            </div>
+            <div class="rigth-element">
+                <select name="" id="">
+                    <option value="mois" selected>Mois en cour</option>
+                    <option value="semaine">Semaine en cour</option>
+                    <option value="annee">Année en cour</option>
+                </select>
+            </div>
+        </div>
+        <div class="first-block-child2">
+            <div class="left-element">
+                <div class="list-element">
+                    <div class="dot dot-one"></div>
+                    <div class="text"><span>Nouveaux</span></div>
+                </div>
+                <div class="list-element">
+                    <div class="dot dot-two"></div>
+                    <div class="text"><span>Inactives</span></div>
+                </div>
+                <div class="list-element">
+                    <div class="dot dot-three"></div>
+                    <div class="text"><span>Actif</span></div>
+                </div>
+            </div>
+            <div class="rigth-element">
+                <div class="d-chart">
+                    <app-doughnut-charts [data]="doughnutChartData"></app-doughnut-charts>
+                </div>
+            </div>
+        </div>
+        <div class="first-block-child3">
+            <div class="left-element">
+                <span>Les deux dernieres semaines</span>
+            </div>
+            <div class="rigth-element">
+                <span>10 nouveaux</span>
+            </div>
+        </div>
+    </div>
+    <div class="second-block">
+        <div class="first-block-child1">
+            <div class="left-element">
+                <img src="../../../assets/svgs/briefcase-icon.svg" alt="chart-icon">
+                <span>Utilisation API</span>
+            </div>
+            <div class="rigth-element">
+                <select name="" id="">
+                    <option value="mois" selected>Mois en cour</option>
+                    <option value="semaine">Semaine en cour</option>
+                    <option value="annee">Année en cour</option>
+                </select>
+            </div>
+        </div>
+        <div class="second-block-child2">
+            <div class="left-element">
+                <div class="line-chart">
+                   <app-line-chart [data]="lineChartData" ></app-line-chart>
+                </div>
+            </div>
+            <div class="rigth-element">
+
+            </div>
+        </div>
+        <div class="first-block-child3">
+            <div class="left-element">
+                <span>Aujourd'hui</span>
+            </div>
+            <div class="rigth-element">
+                <div class="dot"></div>
+                <div class="text">Utilisation API</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rigth-block-element">
+    <div class="first-block">
+        <div class="title">
+            <img src="../../../assets/svgs/mask-icon.svg" alt="wave">
+            <span>API Services</span>
+        </div>
+        <div class="contain-block">
+            <div class="item-list">
+                <div class="contain-items" style="margin-top: 0px !important;">
+                    <div>
+                         <img src="../../../assets/svgs/card-icon.svg" alt="card">
+                    </div>
+                    <div class="text-block">
+                          <span>LoovPay</span>
+                    </div>
+                </div>
+                <div class="contain-items">
+                    <div>
+                        <img src="../../../assets/svgs/increasing-chart.svg" alt="increasing chart">
+                    </div>
+                    <div class="text-block">
+                        <div class="head-text">
+                            <span>35m Xaf</span>
+                        </div>
+                        <div class="medium-text">
+                            <span>Payement ce mois</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contain-items">
+                    <div>
+                        <img src="../../../assets/svgs/increasing-chart.svg" alt="increasing chart">
+                     </div>
+                    <div class="text-block">
+                        <div class="head-text">
+                            <span>2500</span>
+                        </div>
+                        <div class="medium-text">
+                            Utilisateurs totals
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-list" *ngIf="false">
+                <div class="contain-items">
+                    <img src="" alt="">
+                    <span></span>
+                </div>
+                <div class="contain-items">
+                    <img src="" alt="">
+                    <div class="text-block">
+                        <div class="head-text">
+
+                        </div>
+                        <div class="medium-text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="contain-items">
+                    <div class="text-block">
+                        <img src="" alt="">
+                        <div class="head-text">
+
+                        </div>
+                        <div class="medium-text">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-list" *ngIf="false">
+                <div class="contain-items">
+                    <img src="" alt="">
+                    <span></span>
+                </div>
+                <div class="contain-items">
+                    <img src="" alt="">
+                    <div class="text-block">
+                        <div class="head-text">
+
+                        </div>
+                        <div class="medium-text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="contain-items">
+                    <div class="text-block">
+                        <img src="" alt="">
+                        <div class="head-text">
+
+                        </div>
+                        <div class="medium-text">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-anime-dot">
+                <div class="dots">
+                    <div class="dot1 unselect-dot"></div>
+                    <div class="dot2 unselect-dot"></div>
+                    <div class="dot3 unselect-dot"></div>
+                    <div class="dot4 unselect-dot"></div>
+                    <div class="bottom-text">
+                        <div class="text">
+                            Details
+                        </div>
+                        <div class="icon">
+                            <img src="../../../assets/svgs/forward-icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-block">
+        <div class="title">
+            <img src="../../../assets/svgs/flag-icon.svg" alt="wave">
+            <span>Pays</span>
+        </div>
+        <div class="contain-block">
+             <div class="country-block">
+                 <div class="flag">
+                    <img src="../../../assets/Flag_of_Senegal.png" alt="">
+                 </div>
+                 <div class="name">
+                     <span>Senegal</span>
+                 </div>
+             </div>
+             <div class="operator">
+                 <div class="op-list">
+                    <img src="../../../assets/expresso.png" alt="expresso-senegal">
+                    <img src="../../../assets/free-money.png" alt="free-money">
+                    <img src="../../../assets/orange-money.png" alt="orange-money">
+                 </div>
+                 <div class="op-text">
+                    <span>2/3 Actifs</span>
+                 </div>
+             </div>
+             <div class="slider-anime-dot">
+                <div class="dots">
+                    <div class="dot1 unselect-dot"></div>
+                    <div class="dot2 unselect-dot"></div>
+                    <div class="dot3 unselect-dot"></div>
+                    <div class="dot4 unselect-dot"></div>
+                    <div class="bottom-text">
+                        <div class="text">
+                            Details
+                        </div>
+                        <div class="icon">
+                            <img src="../../../assets/svgs/forward-icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="second-view-child">
+    <div class="chart-block">
+        <div class="block-child1">
+            <div class="left-element">
+                <img src="../../../assets/svgs/briefcase-icon.svg" alt="chart-icon">
+                <span>Utilisation API</span>
+            </div>
+            <div class="rigth-element">
+                <select name="" id="">
+                    <option value="mois" selected>Mois en cour</option>
+                    <option value="semaine">Semaine en cour</option>
+                    <option value="annee">Année en cour</option>
+                </select>
+            </div>
+        </div>
+        <div class="block-child2">
+            <div class="left-element">
+                <div class="line-chart">
+                    <app-lines-chart [data]="twoLineChartData"></app-lines-chart>
+                </div>
+            </div>
+        </div>
+        <div class="block-child3">
+            <div class="left-element">
+                <span>Aujourd'hui</span>
+            </div>
+            <div class="rigth-element">
+                <div class="block1">
+                    <div class="dot1"></div>
+                    <div class="text">Payin</div>
+                </div>
+                <div class="block2">
+                    <div class="dot2"></div>
+                    <div class="text">Payout</div>
+                </div>
+
+            </div>
+            
+        </div> -->
+       <!-- <app-lines-chart [data]="twoLineChartData"></app-lines-chart> -->
+   <!--  </div>
+    <div class="data-details-block">
+        <div class="top-block">
+            <div class="title">
+                <div class="icon"><img src="../../../assets/svgs/wallet-icon-small.svg" alt="wallet-icon-small"></div>
+                <div class="text"><span>Vos gains</span></div>
+            </div>
+            <div class="contain-block">
+                <div class="head-text">
+                    <span>
+                        <strong style="color: #0871B2;">235 556 000</strong> </span>
+                        <small style="font-size: 11px; color: #0871B2;"> xaf + </small>
+                        <small style="font-size: 11px; color: #1BD370;"> 2.5% (Hier)</small><br>
+                        <span style="font-size: 11px;">Frais Loov 5% = <strong>130 000 </strong> Xaf</span>
+                </div>
+                <div class="bottom-text">
+
+                </div>
+            </div>
+        </div>
+        <div class="bottom-block">
+            <div class="title">
+                <div class="icon"><img src="../../../assets/svgs/sub-menu-icon.svg" alt="sub-menu-icon"></div>
+                <div class="text"><span>Vos apps (9)</span></div>
+            </div>
+            <div class="contain-block">
+                <div class="item first-item">
+                    <span>+</span>
+                </div>
+                <div class="item second-item">
+                    <img src="../../../assets/svgs/joysteek-icon.svg" alt="">
+                </div>
+                <div class="item third-item">
+                    <img src="../../../assets/svgs/youtube-icon.svg" alt="">
+                </div>
+                <div class="item fourth-item">
+                    <img src="../../../assets/svgs/file-icon.svg" alt="">
+                </div>
+                <div class="item fifth-item">
+                    <img src="../../../assets/svgs/whatsap-icon.svg" alt="">
+                </div>
+                <div class="last sith-item">
+                    <span>></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="global">
+    <div class="input-wrapper">
+        <!-- <app-bar-chart [data]="barChartData"></app-bar-chart> -->
+        <input type="text" required>
+        <label for="Entrer votre nom">Entrer votre nom</label>
+    </div>
+</div>
+
+
